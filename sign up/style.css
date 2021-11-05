@@ -1,0 +1,132 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    font-family: 'Roboto', sans-serif;
+}
+
+.sign-in {
+    display: flex;
+}
+
+.sign-in__introduce {
+    flex: 1;
+    background-image: linear-gradient(130deg, #348d7c 4%, #34cf8f 89%);
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.introduce__tittle {
+    font-size: 4rem;
+    align-self: center;
+    max-width: 40rem;
+    font-size: 5rem;
+}
+
+.introduce__description {
+    align-self: center;
+    max-width: 40rem;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.sign-in__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form__header {
+    text-align: right;
+    margin: 3rem 6.2rem 0 0;
+}
+
+.form__header-account {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #000;
+    margin-right: 3rem;
+}
+
+.form__header-account:hover {
+    opacity: 0.6;
+}
+
+.form__btn-sign-up {
+    font-size: 1.4rem;
+    color: #fff;
+    border: none;
+    border-radius: 6.4px;
+    background-image: linear-gradient(to bottom, #25bfa2, #348d7c);
+    height: 3rem;
+    width: 10.4rem;
+}
+
+.form__btn-sign-up:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.form__infor {
+    align-self: center;
+}
+
+.form__infor-title {
+    font-size: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 0;
+}
+
+.form__infor-description {
+    font-size: 2rem;
+    max-width: 35rem;
+    margin-bottom: 2rem;
+}
+
+.form__infor-input {
+    display: block;
+    width: 40rem;
+    font-size: 1.6rem;
+    padding: 1rem 0 1rem 3rem;
+    border: none;
+    border-radius: 3px;
+    background-color: rgba(229, 229, 229, 0.4);
+    margin: 1rem 0 2.5rem 0;
+    opacity: 0.9;
+    font-weight: 300;
+    height: 4.5rem;
+    outline: none;
+}
+
+.form__infor-input:hover {
+    border: 1px solid  #34cf8f;
+    outline: #34cf8f;   
+}
+
+.form__btn-sign-in {
+    display: block;
+    color: #fff;
+    border: none;
+    font-size: 2.1rem;
+    border-radius: 6.4px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, #25bfa2 -100%, #348d7c);
+    height: 4rem;
+    width: 18rem;
+    font-weight: 700;
+    margin-top: 4rem;
+}
+
+.form__btn-sign-in:hover {
+    opacity: 0.7;
+}
