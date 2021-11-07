@@ -16,10 +16,6 @@ function Header() {
                 <HeaderAccount />
             </div>
 
-            <div className="navigation">
-
-            </div>
-
             <div className="header-bottom">
 
             </div>
