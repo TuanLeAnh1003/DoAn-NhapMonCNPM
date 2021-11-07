@@ -3,6 +3,7 @@ import './Header.css'
 import HeaderSearch from './HeaderSearch'
 import HeaderAccount from './HeaderAccount'
 import Navigation from './Navigation'
+import HeaderBottom from './HeaderBottom'
 
 import Logo from '../Assets/Images/logo-white.png'
 
@@ -25,7 +26,7 @@ function Header() {
             <Navigation />
 
             <div className="header-bottom">
-
+                <HeaderBottom />
             </div>
         </div>
     )
