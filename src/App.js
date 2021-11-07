@@ -3,12 +3,14 @@ import Footer from './Components/Footer'
 import BodyHome from './Components/BodyHome'
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import HeaderBottom from './Components/HeaderBottom';
 
 
 function App() {
   return (
     <Router>
       <div className="app">
+      <HeaderBottom />
         <Header />
         <Switch>
           <Route exact path="/"><BodyHome /></Route>
