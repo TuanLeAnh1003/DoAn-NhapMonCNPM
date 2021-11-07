@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import HeaderSearch from './HeaderSearch'
 import HeaderAccount from './HeaderAccount'
+import Navigation from './Navigation'
 
 import Logo from '../Assets/Images/logo-white.png'
 
@@ -13,12 +14,15 @@ function Header() {
                     <img className="header-top-logo-img" src={Logo} alt="logo" />
                 </div>
                 <HeaderSearch />
+
+                <div className="header-top-notify">
+                    <i className="header-top-notify-icon far fa-bell"></i>
+                </div>
+
                 <HeaderAccount />
             </div>
 
-            <div className="navigation">
-
-            </div>
+            <Navigation />
 
             <div className="header-bottom">
 
