@@ -1,14 +1,66 @@
-/* html{
+html{
     background-color: black;
-} */
+    
+}
+
+.phieuthu_diendocgia{
+    width: 701.03px;
+    height: 112.56px;
+    left: 417px;
+    top: 468px;
+    background: #FFFFFF;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.phieuthu_diendocgia-id{
+    display: flex;
+    padding-right: 60px;
+}
+.phieuthu_diendocgia-id{
+    
+}
+.phieuthu__input_id{
+    width: 280px;
+    height: 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #c4c4c4;
+    padding-left: 15px;
+}
+.phieuthu__input_id:hover{
+    border: 1px solid #348d7c;
+}
+.phieuthu_diendocgia-id__ok{
+    width: 55px;
+    height: 2.2rem;
+    background: linear-gradient(180deg, #25BFA2 0%, #348D7C 100%);
+    border-radius: 4px;
+    color:white;
+    border:rgba(0, 0, 0, 0.25);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.phieuthu_diendocgia-id__ok:hover {
+    cursor: pointer;
+}
+
+.phieuthu_diendocgia_kihieu{
+    padding-left: 60px;
+    font-size: 1.6rem;
+    font-family: Roboto;
+}
 .phieuthu_container{
     width: 701px;
-    height: 520px;
+    height: 470px;
     left: 417px;
     top: 524px;
     background: #FFFFFF;
+    border: 1px solid #c4c4c4;
     border-radius: 15px;
-    
+    padding-top: 0;
 }
 
 .phieuthu_header{
@@ -16,8 +68,10 @@
 }
 
 .phieuthu_header h1 {
-    padding-top: 2rem;
+    padding-top: 3rem;
     font-family: Roboto;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .phieuthu__formgroup{
