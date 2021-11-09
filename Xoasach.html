@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>XÓA SÁCH</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="container__header">XÓA SÁCH</h2>
+      <div class="container__form-section">
+        <div class="form-section__element">
+          <img src="Contacts.png" alt="" />
+          <label>Tên sách</label><br />
+          <input type="text" placeholder="CNPM" />
+        </div>
+        <div class="form-section__element">
+          <img src="User Male.png" alt="" />
+          <label>Tác giả</label><br />
+          <input type="text" placeholder="19521179@gm.uit.edu.vn" />
+        </div>
+        <div class="form-section__element">
+          <img src="Home.png" alt="" />
+          <label>Nhà xuất bản</label>
+          <input type="text" placeholder="Go Vap District, HCM city" />
+        </div>
+        <div class="form-section__element1">
+          <div class="form-section__element">
+            <img src="Calendar.png" alt="" />
+            <label>Năm xuất bản</label>
+            <span class="element__number-wrapper"
+              ><input
+                type="number"
+                min="1899"
+                max="2021"
+                value="2001"
+                style="width: 80px"
+            /></span>
+          </div>
+          <div class="form-section__element">
+            <img src="stack of coin.png" alt="" />
+            <label>Trị giá</label>
+            <input type="text" placeholder="30.000" />
+          </div>
+        </div>
+
+        <div class="form-section__element">
+          <img src="Timesheet.png" alt="" />
+          <label>Ngày lập thẻ</label>
+          <span class="element__number-wrapper"
+            ><input type="number" min="1" max="31" value="10"
+          /></span>
+          <span class="element__number-wrapper"
+            ><input type="number" min="1" max="12" value="10"
+          /></span>
+          <span class="element__number-wrapper"
+            ><input
+              type="number"
+              min="1899"
+              max="2021"
+              value="2001"
+              style="width: 80px"
+          /></span>
+        </div>
+        <div class="form-section__element">
+          <img src="Bookmark.png" alt="" />
+
+          <label>Thể loại</label>
+          <input type="text" placeholder="A" />
+        </div>
+      </div>
+      <span class="container__note-wrapper">
+        <p><b> BẠN CÓ CHẮC CHẮN MUỐN XÓA SÁCH NÀY KHỎI HỆ THỐNG?</b></p>
+      </span>
+      <span class="container__button-wrapper">
+        <button class="button--ignore">Hủy bỏ</button>
+        <button class="button--submit">Thêm</button>
+      </span>
+    </div>
+  </body>
+</html>
