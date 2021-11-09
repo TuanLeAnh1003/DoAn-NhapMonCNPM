@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Thống kê theo thể loại</title>
+</head>
+<body>
+    <div class="thongketheloai">
+        <div class="container">
+            <div class="container_time">
+                <img src="Calendar.png" alt="Calendar">
+                <label for="">Thời gian thống kê</label>
+                <div class="input">
+                        <!-- <input type="number" name="" value=""><br>
+                        <input type="number" name="" value=""><br> -->
+
+                        <select name="month" class="month_option">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+
+                        <select name="year" class="year_option">
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2022">2020</option>
+                            <option value="2021">2021</option>
+                        </select>
+                </div>
+                <button>Tạo báo cáo</button>
+            </div>
+
+            <div class="container_table">
+                <div class="title_table">
+                    <h2>BÁO CÁO THỐNG KÊ THEO THỂ LOẠI</h2>
+                    <p>Tháng 10 năm 2021</p>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr class="table_header">
+                            <th>STT</th>
+                            <th>Tên thể loại</th>
+                            <th>Số lượt mượn</th>
+                            <th>Tỉ lệ</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>A</td>
+                            <td scope="row">x</td>
+                            <td>30%</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>B</td>
+                            <td>y</td>
+                            <td>40%</td>
+                        </tr>
+
+                        <tr>
+                            <td>3</td>
+                            <td>C</td>
+                            <td>z</td>
+                            <td>50%</td>
+                        </tr>
+
+                        <tr>
+                            <td rowspan="2" colspan="3">Tổng lượt mượn:</td>
+                            <td>x+y+z</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
