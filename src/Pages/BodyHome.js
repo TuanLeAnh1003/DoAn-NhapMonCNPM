@@ -1,7 +1,6 @@
-import React from 'react'
-import './BodyHome.css'
-
-import MainImg from '../Assets/Images/main-img.png'
+import React from 'react';
+import './BodyHome.css';
+import MainImg from '../Assets/Images/main-img.png';
 
 function BodyHome() {
     return (
