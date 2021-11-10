@@ -9,56 +9,58 @@
 </head>
 <body>
   <div class="container">
-    <h2 class="container__header">LẬP THẺ ĐỘC GIẢ</h2>
-    <div class="container__form-section">
-      <div class="form-section__element">
-        <img src="Contacts.png" alt="">
-        <label>Họ và tên</label>
-        <input type="text" placeholder="Nguyen Duy An">
+    <div class="container__create-reader">
+      <h2 class="create-reader__header">LẬP THẺ ĐỘC GIẢ</h2>
+      <div class="create-reader__form">
+        <div class="form__element">
+          <img src="Contacts.png" alt="">
+          <label>Họ và tên</label>
+          <input type="text" placeholder="Nguyen Duy An">
+        </div>
+        <div class="form__element">
+          <img src="Gmail logo.png" alt="">
+          <label>Email</label>
+          <input type="text" placeholder="19521179@gm.uit.edu.vn">
+        </div>
+        <div class="form__element">
+          <img src="Gift.png" alt="">
+          <label>Ngày sinh</label>
+          <span class="element__number-wrapper"><input type="number" min="1" max="31" value="10"></span>
+          <span class="element__number-wrapper"><input type="number" min="1" max="12" value="10"></span>
+          <span class="element__number-wrapper"><input type="number" min="1899" max="2021" value="2001" style="width: 80px;"></span>
+        </div>
+        <div class="form__element">
+          <img src="Home.png" alt="">
+          <label>Họ và tên</label>
+          <input type="text" placeholder="Go Vap District, HCM city">
+        </div>
+        <div class="form__element">
+          <img src="Calendar.png" alt="">
+          <label>Ngày lập thẻ</label>
+          <span class="element__number-wrapper"><input type="number" min="1" max="31" value="10"></span>
+          <span class="element__number-wrapper"><input type="number" min="1" max="12" value="10"></span>
+          <span class="element__number-wrapper"><input type="number" min="1899" max="2021" value="2001" style="width: 80px;"></span>
+        </div>
+        <div class="form__element">
+          <img src="User Male.png" alt="">
+          <label>Loại độc giả</label>
+          <span class="element__radio-wrapper">
+            <input type="radio" name="reader-type" value="X">
+            <label>X</label>
+          </span>
+          <span class="element__radio-wrapper">
+            <input type="radio" name="reader-type" value="Y">
+            <label>Y</label>
+          </span>
+        </div>
       </div>
-      <div class="form-section__element">
-        <img src="Gmail logo.png" alt="">
-        <label>Email</label>
-        <input type="text" placeholder="19521179@gm.uit.edu.vn">
-      </div>
-      <div class="form-section__element">
-        <img src="Gift.png" alt="">
-        <label>Ngày sinh</label>
-        <span class="element__number-wrapper"><input type="number" min="1" max="31" value="10"></span>
-        <span class="element__number-wrapper"><input type="number" min="1" max="12" value="10"></span>
-        <span class="element__number-wrapper"><input type="number" min="1899" max="2021" value="2001" style="width: 80px;"></span>
-      </div>
-      <div class="form-section__element">
-        <img src="Home.png" alt="">
-        <label>Họ và tên</label>
-        <input type="text" placeholder="Go Vap District, HCM city">
-      </div>
-      <div class="form-section__element">
-        <img src="Calendar.png" alt="">
-        <label>Ngày lập thẻ</label>
-        <span class="element__number-wrapper"><input type="number" min="1" max="31" value="10"></span>
-        <span class="element__number-wrapper"><input type="number" min="1" max="12" value="10"></span>
-        <span class="element__number-wrapper"><input type="number" min="1899" max="2021" value="2001" style="width: 80px;"></span>
-      </div>
-      <div class="form-section__element">
-        <img src="User Male.png" alt="">
-        <label>Loại độc giả</label>
-        <span class="element__radio-wrapper">
-          <input type="radio" name="reader-type" value="X">
-          <label>X</label>
-        </span>
-        <span class="element__radio-wrapper">
-          <input type="radio" name="reader-type" value="Y">
-          <label>Y</label>
-        </span>
-      </div>
+      <span class="create-reader__button-wrapper">
+        <button class="button--submit">Tạo thẻ</button>
+      </span>
+      <span class="create-reader__note-wrapper">
+        <p>*Thẻ có giá trị trong vòng 06 tháng kể từ ngày lập thẻ</p>
+      </span>
     </div>
-    <span class="container__button-wrapper">
-      <button class="button--submit">Tạo thẻ</button>
-    </span>
-    <span class="container__note-wrapper">
-      <p>*Thẻ có giá trị trong vòng 06 tháng kể từ ngày lập thẻ</p>
-    </span>
   </div>
 </body>
 </html>
