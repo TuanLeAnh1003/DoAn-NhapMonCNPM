@@ -5,15 +5,15 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: center;
   width: 700px;
-  height: 570px;
+  height: 500px;
   border-radius: 7px;
   box-shadow: 0px -0.75px 15px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   padding: 50px 50px 0px 50px;
 }
-/*LAP THE DOC GIA*/
+/*LAP PHIEU MUON SACH*/
 .container__header {
   font-weight: 900;
   font-size: 32px;
@@ -36,7 +36,7 @@
   width: 25px;
   height: 25px;
   padding: 6px 0px;
-  margin-right: 1px;
+  margin-right: 5px;
 }
 
 .form-section__element > label {
@@ -124,10 +124,10 @@
 }
 .element__button-wrapper button {
   font-weight: 700;
-  font-size: 8px;
+  font-size: 10px;
   color: #ffffff;
   border-radius: 7px;
-  padding: 10px 10px;
+  padding: 10px 12px;
   border-style: none;
   margin: 20px;
   cursor: pointer;
@@ -138,6 +138,7 @@
 .button--ignore {
   background: linear-gradient(180deg, #bf2525 0%, #8d3434 100%);
 }
+
 /*note*/
 .container__note-wrapper p {
   font-size: 14px;

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style1.css" />
+    <link rel="stylesheet" href="LapPhieuMuonSach-Demo.css" />
     <title>LẬP PHIẾU MƯỢC SÁCH</title>
   </head>
   <body>
@@ -12,7 +12,7 @@
       <h2 class="container__header">LẬP PHIẾU MƯỢN SÁCH</h2>
       <div class="container__form-section">
         <div class="form-section__element">
-          <img src="Contacts.png" alt="" />
+          <img src="Contacts.png" alt="Contacts" />
           <label>Độc giả</label>
           <span class="element__button-wrapper">
             <input type="text" placeholder="Nhập ID độc giả" />
@@ -21,7 +21,7 @@
         </div>
 
         <div class="form-section__element">
-          <img src="Calendar.png" alt="" />
+          <img src="Calendar.png" alt="Calendar" />
           <label>Ngày lập thẻ</label>
           <span class="element__number-wrapper"
             ><input type="number" min="1" max="31" value="10"
@@ -41,7 +41,7 @@
       </div>
 
       <div class="form-section__element">
-        <img src="Bookmark.png" alt="" />
+        <img src="Bookmark.png" alt="Bookmark" />
         <label>Sách mượn</label>
 
         <span class="element__button-wrapper">
@@ -52,10 +52,33 @@
       <div class="form-section__element">
         <label>Số lượng</label>
         <span class="element__number-wrapper">
-          <input type="number" min="1" max="100" value="1" />
+          <input type="number" min="1" max="100" value="2" />
         </span>
       </div>
-
+      <div class="container__table">
+        <table class="table__book">
+          <tbody>
+            <tr>
+              <td class="table__book-id">#123456</td>
+              <td class="table__book-name">CNPM</td>
+              <td>A</td>
+              <td>Hồ Thanh Phong</td>
+              <td class="table__button-wrapper">
+                <button class="button--ignore">Xóa</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="table__book-id">#123456</td>
+              <td class="table__book-name">CNPM</td>
+              <td>A</td>
+              <td>Hồ Thanh Phong</td>
+              <td class="table__button-wrapper">
+                <button class="button--ignore">Xóa</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <span class="container__button-wrapper">
         <button class="button--submit">OK</button>
       </span>

@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="LapPhieuMuonSach.css" />
+    <title>LẬP PHIẾU MƯỢC SÁCH</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="container__header">LẬP PHIẾU MƯỢN SÁCH</h2>
+      <div class="container__form-section">
+        <div class="form-section__element">
+          <img src="Contacts.png" alt="Contacts" />
+          <label>Độc giả</label>
+          <span class="element__button-wrapper">
+            <input type="text" placeholder="Nhập ID độc giả" />
+            <button class="button--submit">OK</button>
+          </span>
+        </div>
+
+        <div class="form-section__element">
+          <img src="Calendar.png" alt="Calendar" />
+          <label>Ngày lập thẻ</label>
+          <span class="element__number-wrapper"
+            ><input type="number" min="1" max="31" value="10"
+          /></span>
+          <span class="element__number-wrapper"
+            ><input type="number" min="1" max="12" value="10"
+          /></span>
+          <span class="element__number-wrapper"
+            ><input
+              type="number"
+              min="1899"
+              max="2021"
+              value="2001"
+              style="width: 80px"
+          /></span>
+        </div>
+      </div>
+
+      <div class="form-section__element">
+        <img src="Bookmark.png" alt="Bookmark" />
+        <label>Sách mượn</label>
+
+        <span class="element__button-wrapper">
+          <input type="text" placeholder="Nhập ID sách" />
+          <button class="button--submit">OK</button>
+        </span>
+      </div>
+      <div class="form-section__element">
+        <label>Số lượng</label>
+        <span class="element__number-wrapper">
+          <input type="number" min="1" max="100" value="1" />
+        </span>
+      </div>
+
+      <span class="container__button-wrapper">
+        <button class="button--submit" style="margin-top: 70px">OK</button>
+      </span>
+    </div>
+  </body>
+</html>

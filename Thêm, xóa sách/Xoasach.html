@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -26,10 +26,13 @@
           <label>Nhà xuất bản</label>
           <input type="text" placeholder="Go Vap District, HCM city" />
         </div>
-        <div class="form-section__element1">
-          <div class="form-section__element">
-            <img src="Calendar.png" alt="" />
-            <label>Năm xuất bản</label>
+        <div class="form-section__element-1">
+          <div class="form-section__element form-section__element-3">
+            <div class="form-section__element-wrapper">
+              <!-- </img src="./Calender.png" alt=""> -->
+              <img src="Calendar.png" alt="Calendar" />
+              <label>Năm xuất bản</label>
+            </div>
             <span class="element__number-wrapper"
               ><input
                 type="number"
@@ -39,10 +42,17 @@
                 style="width: 80px"
             /></span>
           </div>
-          <div class="form-section__element">
-            <img src="stack of coin.png" alt="" />
-            <label>Trị giá</label>
-            <input type="text" placeholder="30.000" />
+          <div class="form-section__element form-section__element-3">
+            <div class="form-section__element-wrapper">
+              <!-- <img src="./Calender.png" alt=""> -->
+              <img src="stack of coin.png" alt="stack of coin" />
+              <label class="fo">Trị giá</label>
+            </div>
+            <input
+              class="form-section__element-input-gia"
+              type="text"
+              placeholder="30.000"
+            />
           </div>
         </div>
 
@@ -72,7 +82,9 @@
         </div>
       </div>
       <span class="container__note-wrapper">
-        <p><b> BẠN CÓ CHẮC CHẮN MUỐN XÓA SÁCH NÀY KHỎI HỆ THỐNG?</b></p>
+        <p>
+          <br /><br /><b> BẠN CÓ CHẮC CHẮN MUỐN XÓA SÁCH NÀY KHỎI HỆ THỐNG?</b>
+        </p>
       </span>
       <span class="container__button-wrapper">
         <button class="button--ignore">Hủy bỏ</button>
