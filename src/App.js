@@ -1,20 +1,16 @@
-import Header from './Components/Header'
-import Footer from './Components/Footer'
-import BodyHome from './Components/BodyHome'
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import HeaderBottom from './Components/HeaderBottom';
-
+import SignIn from './Pages/SignIn';
+import WebSite from './Pages/WebSite';
 
 function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
-        <Switch>
-          <Route exact path="/"><BodyHome /></Route>
-        </Switch>
-        <Footer />
+          <Switch>
+            <Route exact path="/"><SignIn /></Route>
+            <Route path="/thuvien"><WebSite /></Route>
+          </Switch>
       </div>
   </Router>
   );
