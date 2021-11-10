@@ -25,15 +25,13 @@
     position: relative;
 }
 
-.nav-item::after {
-    content: "";
-    width: 157px;
-    height: 40px;
-    position: absolute;
-    top: 30px;
-    left: 0;
+.nav-item:hover #nav-item-link-statistical {
     display: block;
 }
+.nav-item:hover #nav-item-link-book {
+    display: block;
+}
+
 
 .nav-item-link {
     color: black;
@@ -47,15 +45,21 @@
     align-items: center;
 }
 
+.nav-item-link::after {
+    z-index: 3;
+    content: "";
+    width: 157px;
+    height: 13px;
+    position: absolute;
+    top: 52px;
+    left: 0;
+    display: block;
+}
+
 .nav-item-link:hover {
     background-color: #34CF8F;
     color: white;
     font-weight: bold;
-}
-
-.nav-item-link-active {
-    background-color: #34CF8F;
-    color: white;
 }
 
 .nav-item-link-icon {
@@ -63,15 +67,19 @@
 } 
 
 .nav-item-list {
+    z-index: 1;
     position: absolute;
     top: 62px;
     left: -40px;
     list-style: none;
-    width: 157px;
+    width: 117px;
+    margin-left: 40px;
     display: none;
+    background-color: white;
 }
 
 .nav-item-list-item {
+    z-index: 2;
     height: 35px;
     text-decoration: none;
     font-size: 14px;
@@ -81,6 +89,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: -40px;
 }
 
 .nav-item-list-item-link {
@@ -95,14 +104,8 @@
     align-items: center;
 }
 
-.nav-item-list-item-link:hover {
+.nav-item-list-item .nav-item-list-item-link:hover {
     background-color: #34CF8F;
     color: white;
     font-weight: bold;
 }
-
-.nav-item-list-item-active {
-    background-color: #34CF8F;
-    color: white;
-}
-
