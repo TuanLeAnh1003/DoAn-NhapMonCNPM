@@ -1,32 +1,56 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router';
 import './SignIn.css';
 
 function SignIn() {
-  return (
-    <div class="sign-in">
-        <div class="sign-in__introduce">
-            <h2 class="introduce__tittle">
+    const [userName, setUserName] = useState('');
+    const [userPassword, setUserPassword] = useState('');
+
+    const history = useHistory()
+
+    const handleSignIn = () => {
+        if(userName !== "" && userPassword !== "") {
+            // await axios.post()
+            // .then()
+            history.push('/thuvien/');
+        } else {
+            alert('Có trường vẫn chưa được nhập!');
+        }
+    }
+
+    return (
+    <div className="sign-in">
+        <div className="sign-in__introduce">
+            <h2 className="introduce__tittle">
                 Welcome to our Library LibrarIse !
             </h2>
-            <p class="introduce__description">
+            <p className="introduce__description">
                 We arrange access to the world of information – whether online, multimedia or in print – and the training and support to exploit it to the full. Come and make the most of us!
             </p>
         </div>
 
-        <div class="sign-in__form">
-            <header class="form__header">
-                <a href="" class="form__header-account">Đã có tài khoản ?</a>
-                <button class="form__btn-sign-up">Đăng ký</button>
-            </header>
-
-            <div action="" class="form__infor">
-                <h3 class="form__infor-title">Hello! Welcome back.</h3>
-                <p class="form__infor-description">Log in with your data that you entered during Your registration</p>
-                <input type="text" class="form__infor-input" placeholder="Tên người dùng" />
-                <input type="password" class="form__infor-input" placeholder="Mật khẩu" />
-                <a href="" class="form__infor-forgot-password">Quên mật khẩu</a>
-                <button class="form__btn-sign-in"><Link to="thuvien/">Đăng nhập</Link></button>
+        <div className="sign-in__form">
+            <div action="" className="form__infor">
+                <h3 className="form__infor-title">Hello! Welcome back.</h3>
+                <p className="form__infor-description">Log in with your data that you entered during Your registration</p>
+                <input 
+                    type="text" 
+                    value={userName}
+                    className="form__infor-input" 
+                    placeholder="Tên người dùng" 
+                    onChange={e => setUserName(e.target.value)}
+                />
+                <input 
+                    type="password" 
+                    value={userPassword}
+                    className="form__infor-input" 
+                    placeholder="Mật khẩu" 
+                    onChange={e => setUserPassword(e.target.value)}
+                />
+                <a href="#" className="form__infor-forgot-password">Quên mật khẩu</a>
+                <button className="form__btn-sign-in" onClick={handleSignIn}>Đăng nhập</button>
             </div>
         </div>
     </div>

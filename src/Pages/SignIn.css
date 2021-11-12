@@ -13,16 +13,15 @@
 }
 
 .introduce__tittle {
-  font-size: 4rem;
+  font-size: 54px;
   align-self: center;
   max-width: 40rem;
-  font-size: 5rem;
 }
 
 .introduce__description {
   align-self: center;
   max-width: 40rem;
-  font-size: 3rem;
+  font-size: 30px;
   font-weight: 400;
   margin: 0;
 }
@@ -33,76 +32,45 @@
   flex-direction: column;
 }
 
-.form__header {
-  text-align: right;
-  margin: 3rem 6.2rem 0 0;
-}
-
-.form__header-account {
-  font-size: 1.6rem;
-  text-decoration: none;
-  color: #000;
-  margin-right: 3rem;
-}
-
-.form__header-account:hover {
-  opacity: 0.6;
-}
-
-.form__btn-sign-up {
-  font-size: 1.4rem;
-  color: #fff;
-  border: none;
-  border-radius: 6.4px;
-  background-image: linear-gradient(to bottom, #25bfa2, #348d7c);
-  height: 3rem;
-  width: 10rem;
-}
-
-.form__btn-sign-up:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
-
 .form__infor {
   align-self: center;
 }
 
 .form__infor-title {
-  font-size: 4.2rem;
-  margin-bottom: 1rem;
-  margin-top: 8rem;
+  font-size: 45px;
+  margin-bottom: 10px;
+  margin-top: 80px;
 }
 
 .form__infor-description {
-  font-size: 2rem;
-  max-width: 35rem;
-  text-align: center;
-  margin-bottom: 4rem;
+  font-size: 23px;
+  max-width: 500px;
+  text-align: left;
+  margin-bottom: 40px;
 }
 
 .form__infor-input {
   display: block;
-  width: 40rem;
+  width: 422px;
   font-size: 1.6rem;
   padding: 1rem 0 1rem 3rem;
   border: none;
   border-radius: 3px;
   background-color: rgba(229, 229, 229, 0.4);
-  margin: 1rem 0 2.5rem 0;
+  margin: 10px 0 25px 0;
   opacity: 0.9;
   font-weight: 300;
-  height: 4.5rem;
+  height: 54px;
   outline: none;
 }
 
 .form__infor-input:hover {
-  border: 1px solid  #34cf8f;
+  border: 1px solid #34cf8f;
   outline: #34cf8f;   
 }
 
 .form__infor-forgot-password {
-  font-size: 1.6rem;
+  font-size: 16px;
   text-decoration: none;
   color: #2e6770;
   text-align: left;
@@ -116,16 +84,21 @@
   display: block;
   color: #fff;
   border: none;
-  font-size: 2.1rem;
+  font-size: 20px;
   border-radius: 6.4px;
   text-align: center;
   background-image: linear-gradient(to bottom, #25bfa2 -100%, #348d7c);
-  height: 4rem;
-  width: 18rem;
+  height: 46px;
+  width: 189px;
   font-weight: 700;
-  margin-top: 4rem;
+  margin-top: 40px;
 }
 
 .form__btn-sign-in:hover {
   opacity: 0.7;
+}
+
+.form__btn-sign-in a {
+  text-decoration: none;
+  color: #fff;
 }

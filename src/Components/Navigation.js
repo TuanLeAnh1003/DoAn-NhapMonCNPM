@@ -19,13 +19,13 @@ function Navigation() {
                     </Link>
                     <ul className="nav-item-list" id="nav-item-link-book">
                         <li className="nav-item-list-item">
-                            <Link to="/" className="nav-item-list-item-link">Mượn sách</Link>
+                            <Link to="/thuvien/sachmuon" className="nav-item-list-item-link">Mượn sách</Link>
                         </li>
                         <li className="nav-item-list-item">
-                            <Link to="/" className="nav-item-list-item-link">Trả sách</Link>
+                            <Link to="/thuvien/sachtra" className="nav-item-list-item-link">Trả sách</Link>
                         </li>
                         <li className="nav-item-list-item">
-                            <Link to="/" className="nav-item-list-item-link">Thu tiền phạt</Link>
+                            <Link to="/thuvien/tienphat" className="nav-item-list-item-link">Thu tiền phạt</Link>
                         </li>
                     </ul>
                 </li>
