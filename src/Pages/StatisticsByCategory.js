@@ -14,8 +14,8 @@ function StatisticsByCategory() {
     return (
         <div>
             <div className="thongketheloai">
-                <div className="container">
-                    <div className="container_time">
+                <div className="container-statistics-category">
+                    <div className="container_time-statistics-category">
                         <i class="fas fa-calculator"></i>
                         <label for="">Thời gian thống kê</label>
                         <div className="input">
@@ -47,7 +47,7 @@ function StatisticsByCategory() {
                         <button className="button-statistic" onClick={handleCreateStatistic}>Tạo báo cáo</button>
                     </div>
 
-                    <div className="container_table">
+                    <div className="container_table-statistics-category">
                         <div className="title_table">
                             <h2>BÁO CÁO THỐNG KÊ THEO THỂ LOẠI</h2>
                             <p>Tháng {month} năm {year}</p>
