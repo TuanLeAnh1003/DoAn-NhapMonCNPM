@@ -7,10 +7,10 @@ function Navigation() {
         <div className="nav">
             <ul className="nav-wrapper">
                 <li className="nav-item">
-                    <Link to="/" className="nav-item-link">Trang chủ</Link>
+                    <Link to="/thuvien/" className="nav-item-link">Trang chủ</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/" className="nav-item-link">Sách</Link>
+                    <Link to="/thuvien/sach/" className="nav-item-link">Sách</Link>
                 </li>
                 <li className="nav-item">
                     <Link to="/" className="nav-item-link">
@@ -30,7 +30,7 @@ function Navigation() {
                     </ul>
                 </li>
                 <li className="nav-item">
-                    <Link to="/" className="nav-item-link">Người dùng</Link>
+                    <Link to="/thuvien/nguoidung/" className="nav-item-link">Người dùng</Link>
                 </li>
                 <li className="nav-item">
                     <Link to="/" className="nav-item-link">
@@ -39,15 +39,15 @@ function Navigation() {
                     </Link>
                     <ul className="nav-item-list" id="nav-item-link-statistical">
                         <li className="nav-item-list-item">
-                            <Link to="/" className="nav-item-list-item-link">Thể loại</Link>
+                            <Link to="/thuvien/thongketheloai/" className="nav-item-list-item-link">Thể loại</Link>
                         </li>
                         <li className="nav-item-list-item">
-                            <Link to="/" className="nav-item-list-item-link">Trả không đúng hạn</Link>
+                            <Link to="/thuvien/thongketratre/" className="nav-item-list-item-link">Trả không đúng hạn</Link>
                         </li>
                     </ul>
                 </li>
                 <li className="nav-item">
-                    <Link to="/" className="nav-item-link">Cài đặt</Link>
+                    <Link to="/thuvien/caidat" className="nav-item-link">Cài đặt</Link>
                 </li>
             </ul>
         </div>
