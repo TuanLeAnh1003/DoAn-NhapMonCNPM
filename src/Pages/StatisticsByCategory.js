@@ -16,7 +16,7 @@ function StatisticsByCategory() {
             <div className="thongketheloai">
                 <div className="container">
                     <div className="container_time">
-                        <i class="fas fa-calculator"></i>
+                        <i className="fas fa-calculator"></i>
                         <label for="">Thời gian thống kê</label>
                         <div className="input">
                                 {/* <!-- <input type="number" name="" value=""><br>

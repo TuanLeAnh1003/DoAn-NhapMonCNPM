@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import './SignIn.css';
@@ -10,15 +10,36 @@ function SignIn() {
 
     const history = useHistory()
 
-    const handleSignIn = () => {
+    const handleSignIn = async () => {
         if(userName !== "" && userPassword !== "") {
-            // await axios.post()
-            // .then()
-            history.push('/thuvien/');
+            await axios.post('http://localhost:5000/admin/signin', {
+                userName: userName,
+                userPassword: userPassword,
+            })
+            .then(data => {
+                if(data.data === 1) {
+                    console.log(data);
+                    history.push('/thuvien/');
+                } else {
+                    console.log(data);
+                    alert("Tài khoản này không tồn tại. Hãy thử lại!")
+                    setUserName('');
+                    setUserPassword('');
+            }                    
+
+            })
+            .catch(err => alert("Có lỗi xảy ra, vui lòng đăng nhập lại!"))
         } else {
             alert('Có trường vẫn chưa được nhập!');
         }
     }
+
+    useEffect(() => {
+        return () => {
+            setUserName('');
+            setUserPassword('');
+        }
+    }, [])
 
     return (
     <div className="sign-in">

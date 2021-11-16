@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import PhieuMuonSach from '../Components/PhieuMuonSach';
 import './SachMuon.css';
 
 function SachMuon() {
-
+  const [listBorrowedBooks, setListBorrowedBooks] = useState([]);
   const [isBorrow, setIsBorrow] = useState(false);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/admin/sachmuon')
+    .then(data => {
+      if(data.data.length >= 1) {
+        setListBorrowedBooks([...data.data]);
+      } else {
+        alert("Không có sách đang được mượn!");
+      }
+    })
+    .catch(err => alert('Có lỗi xảy ra. Hãy thử tải lại trang!'));
+  },[])
 
   const handleAdd = () => {
     setIsBorrow(true);
@@ -31,15 +44,17 @@ function SachMuon() {
               </thead>
 
               <tbody>
-                  <tr>
-                      <td className="table__check"><input type="checkbox" /></td>
-                      <td className="table__stt">1</td>
-                      <td >CNPM</td>
-                      <td >A</td>
-                      <td >Tác giả 1</td>
-                      <td >5000đ</td>
-                      <td >Nhà xuất bản trẻ</td>
+                {listBorrowedBooks.map((item, index) => (
+                  <tr key={index}>
+                      <td className="table__check"><input type="checkbox"/></td>
+                      <td className="table__stt">{index+1}</td>
+                      <td >{item.TenSach}</td>
+                      <td >{item.TenTheLoai}</td>
+                      <td >{item.TenTacGia}</td>
+                      <td >{item.TriGia}đ</td>
+                      <td >{item.TenNXB}</td>
                   </tr>
+                ))}
               </tbody> 
           </table>
       </div>

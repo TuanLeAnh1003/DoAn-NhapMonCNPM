@@ -1,7 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import './Book.css'
 
 function Book() {
+    const [books, setBooks] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/admin/sach')
+        .then(data => {
+            if(data.data.length >= 1) setBooks([...data.data]);
+            else alert('Chưa có sách nào!');
+        })
+        .catch(err => alert('Có lỗi xảy ra. Hãy thử tải lại trang!'));
+    }, []);
 
     const handleAddBook = () => {
         const AddBook = document.querySelector('.container-book-wrapper')
@@ -32,126 +43,18 @@ function Book() {
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td >CNPM</td>
-                                <td >A</td>
-                                <td >Tác giả 1</td>
-                                <td >5000đ</td>
-                                <td >Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
-                            <tr>
-                                <td className="table__check"><input type="checkbox"/></td>
-                                <td className="table__stt">1</td>
-                                <td>CNPM</td>
-                                <td>A</td>
-                                <td>Tác giả 1</td>
-                                <td>5000đ</td>
-                                <td>Nhà xuất bản trẻ</td>
-                            </tr>
-
+                            {books.map((item, index) => (
+                                <tr key={index}>
+                                    <td className="table__check"><input type="checkbox"/></td>
+                                    <td className="table__stt">{index+1}</td>
+                                    <td >{item.TenSach}</td>
+                                    <td >{item.TenTheLoai}</td>
+                                    <td >{item.TenTacGia}</td>
+                                    <td >{item.TriGia}đ</td>
+                                    <td >{item.TenNXB}</td>
+                                </tr>
+                            ))}
+                            
                         </tbody> 
                     </table>
                 </div>

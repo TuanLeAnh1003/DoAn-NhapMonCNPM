@@ -1,7 +1,22 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Users.css'
 
 function Users() {
+    const [listReaderCards, setListReaderCards] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/admin/docgia')
+        .then(data => {
+          if(data.data.length >= 1) {
+            setListReaderCards([...data.data]);
+          } else {
+            alert("Không có thẻ độc giả nào!");
+          }
+        })
+        .catch(err => alert('Có lỗi xảy ra. Hãy thử tải lại trang!'));
+    }, []);
+
     const handleCreateUser = () => {
         const createUser = document.querySelector('.users-create-wrapper')
 
@@ -31,138 +46,18 @@ function Users() {
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">1</td>
-                            <td>Jane Cooper</td>
-                            <td>7/11/19</td>
-                            <td>5/27/15</td>
-                            <td>curtis.weaver@example.com</td>
-                            <td>ul. Końcowa 72, Szczecin 70-871</td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">2</td>
-                            <td>Cameron Williamson</td>
-                            <td>5/27/15</td>
-                            <td>9/23/16</td>
-                            <td>deanna.curtis@example.com</td>
-                            <td>8502 Preston Rd. Inglewood, Maine 98380</td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">3</td>
-                            <td>Marvin McKinney</td>
-                            <td>8/15/17</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>michael.mitc@example.com</td>
-                            <td>20242 Schiller Camp</td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">4</td>
-                            <td>Theresa Webb</td>
-                            <td>9/4/12</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>nevaeh.simmons@example.com</td>
-                            <td>ul. Szajnochy 103, Bydgoszcz 85-738</td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">5</td>
-                            <td>Wade Warren</td>
-                            <td>9/4/12</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>curtis.weaver@example.com</td>
-                            <td>Mk2 Odéon</td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">6</td>
-                            <td>Darlene Robertson</td>
-                            <td>6/19/14</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>Email</td>
-                            <td>Rue Arthur-Groussier (75010)</td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">7</td>
-                            <td>Cameron Williamson</td>
-                            <td>5/27/15</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>Email</td>
-                            <td>Địa chỉ </td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">8</td>
-                            <td>Esther Howard</td>
-                            <td>6/19/14</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>Email</td>
-                            <td>Địa chỉ </td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">9</td>
-                            <td>Guy Hawkins</td>
-                            <td>Ngày sinh</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>Email</td>
-                            <td>Địa chỉ </td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">10</td>
-                            <td>Cameron Williamson</td>
-                            <td>Ngày sinh</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>Email</td>
-                            <td>Địa chỉ </td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">11</td>
-                            <td>Họ và tên</td>
-                            <td>Ngày sinh</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>Email</td>
-                            <td>Địa chỉ </td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
-                        <tr>
-                            <td className="table__check"><input type="checkbox"/></td>
-                            <td className="table__stt">12</td>
-                            <td>Họ và tên</td>
-                            <td>Ngày sinh</td>
-                            <td>Ngày lập thẻ</td>
-                            <td>Email</td>
-                            <td>Địa chỉ </td>
-                            <td>Loại độc giả</td>
-                        </tr>
-
+                        {listReaderCards.map((item, index) => (
+                            <tr key={index}>
+                                <td className="table__check"><input type="checkbox"/></td>
+                                <td className="table__stt">{index+1}</td>
+                                <td >{item.HoTen}</td>
+                                <td >{item.NgSinh}</td>
+                                <td >{item.NgLapThe}</td>
+                                <td >{item.Email}đ</td>
+                                <td >{item.DiaChi}</td>
+                                <td >{item.LoaiDocGia}</td>
+                            </tr>
+                        ))}
                     </tbody> 
                 </table>
             </div>
