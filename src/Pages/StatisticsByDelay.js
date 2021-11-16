@@ -15,8 +15,8 @@ function StatisticsByDelay() {
     return (
         <div>
             <div className="thongketrehan">
-                <div className="container">
-                    <div className="container_time">
+                <div className="container-statistics-delay">
+                    <div className="container_time-statistics-category">
                         <i className="fas fa-calculator"></i>
                         <label for="">Thời gian thống kê</label>
                             <div className="input">
@@ -79,7 +79,7 @@ function StatisticsByDelay() {
                         <button className="button-statistic-delay" onClick={handleStatisticDelay}>Tạo báo cáo</button>
                     </div>
 
-                    <div className="container_table">
+                    <div className="container_table-statistics-delay">
                         <div className="title_table">
                             <h2>BÁO CÁO THỐNG KÊ SÁCH TRẢ TRỄ</h2>
                             <p>Ngày {date} tháng {month} năm {year}</p>
